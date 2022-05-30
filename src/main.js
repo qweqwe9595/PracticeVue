@@ -6,17 +6,14 @@ import cartpageVue from "./pages/cartPage.vue";
 import productPageVue from "./pages/productPage.vue";
 
 
-Vue.use(VueRouter)
-
-export const router = new VueRouter({
+const router = new VueRouter({
+  mode: 'history',
     routes: [
         {path: '/', component: productPageVue},
         {path: '/cart', component: cartpageVue}
     ]
 })
-
-Vue.config.productionTip = false
-
+Vue.use(VueRouter); 
 new Vue({
   router,
   vuetify,
